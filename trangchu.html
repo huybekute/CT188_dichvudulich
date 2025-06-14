@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="" type="image/x-ico"/>
-    <title>Trang chủ</title>
+    <link rel="icon" href="Image/logo.png" type="image/x-ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="tonghop.css">
+    <link rel="stylesheet" href="CSS/trangchu.css">
+    <title>Công Ty Dịch Vụ Du Lịch Meandry</title>
 </head>
 <body>
     <header class="header">
         <div class="header__container">
-            <a href="trangchu.html" class="header__logo"><img src="logo.png" alt="MEANDRY"></a>
+            <a href="trangchu.html" class="header__logo"><img src="Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
                 <a href="trangchu.html">TRANG CHỦ</a>
                 <a href="gioithieu.html">GIỚI THIỆU</a>
                 <a href="tourdulich.html">TOUR DU LỊCH</a>
+                <a href="giohang.html">GIỎ HÀNG</a>
                 <a href="dangnhap.html">ĐĂNG NHẬP</a>
                 <a href="dangky.html">ĐĂNG KÝ</a>
                 <a href="lienhe.html">LIÊN HỆ</a>
@@ -23,7 +24,54 @@
         </div>
     </header>
     <main class="home">
+        <section class="home__section1">
+            <div class="home__div1 home__div--revealUp home__div--hidden">
+                <h1>DU LỊCH THEO <br/>PHONG CÁCH RIÊNG <br/>CỦA BẠN</h1>
+                <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+            </div>
+        </section>
 
+        <section class="home__section2 home__section--revealUp home__section--hidden">
+            <div class="home__div2">
+                <img src="Image/home1.jpg"/>
+                <h1>TRẢI NGHIỆM VĂN HÓA <br/> ẨM THỰC</h1>
+                <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+            </div>
+
+            <div class="home__div2">
+                <img src="Image/home2.jpg" />
+                <h1>KHÁM PHÁ DU LỊCH <br/> CHỢ NỔI</h1>
+                <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+            </div>
+
+            <div class="home__div2">
+                <img src="Image/home3.jpg"/>
+                <h1>BAY LÊN VÙNG ĐẤT <br/> CHÍN RỒNG</h1>
+                <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+            </div>
+        </section>
+
+        <section class="home__section3">
+            <div class="home__div3">
+                <img class="home__img--revealLeft home__img--hidden" src="Image/gt1.jpg"/>
+                <div class="home__div3--content home__div--revealRight home__div--hidden">
+                    <h1>KHÁM PHÁ VẺ ĐẸP <br/> MIỀN TÂY SÔNG NƯỚC</h1>
+                    <p>Nổi bật với hệ sinh thái đa dạng, từ những khu rừng ngập mặn, vườn trái cây trĩu quả, cho đến những kênh rạch uốn lượn. Du khách sẽ được trải nghiệm cảm giác yên bình khi lênh đênh trên những chiếc ghe, thuyền khám phá chợ nổi, làng nghề truyền thống và những bản làng ven sông.</p>
+                    <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home__section4">
+            <div class="home__div4">
+                <div class="home__div4--content home__div--revealLeft home__div--hidden">
+                    <h1>HÒA MÌNH VÀO <br/> THIÊN NHIÊN THƠ MỘNG</h1>
+                    <p>Bạn có thể nhẹ nhàng thả hồn theo dòng nước trên chiếc thuyền độc mộc, lắng nghe tiếng chim hót líu lo và cảm nhận mùi thơm ngọt ngào của hoa trái chín mọng. Không chỉ là cảnh sắc mà còn là hơi thở, là nhịp sống hòa quyện cùng con người, tạo nên một không gian thơ mộng và lãng mạn, khiến lòng người dịu lại và tìm thấy sự thư thái tuyệt vời.</p>
+                    <a href="tourdulich.html">KHÁM PHÁ NGAY</a>
+                </div>
+                <img class="home__img--revealRight home__img--hidden" src="Image/gi2.jpg" />
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__logo">
@@ -46,11 +94,13 @@
 
         <div class="footer__services">
             <h1 class="footer__h1">Hỗ trợ khách hàng</h1>
-            <a href="#" class="footer__services-item">Chính sách bảo mật</a>
-            <a href="#" class="footer__services-item">Hướng dẫn đặt tour</a>
-            <a href="#" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
-            <a href="#" class="footer__services-item">Các câu hỏi thường gặp</a>
+            <a href="" class="footer__services-item">Chính sách bảo mật</a>
+            <a href="" class="footer__services-item">Hướng dẫn đặt tour</a>
+            <a href="" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
+            <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
         </div>
     </footer>
+
+    <script src="JS/trangchu.js"></script>
 </body>
 </html>
