@@ -6,7 +6,7 @@ const revealSection = function(entries, observer){
     entry.target.classList.remove("home__div--hidden");
     entry.target.classList.remove("home__img--hidden");
     entry.target.classList.remove("home__section--hidden");
-    observer.unobserve(entry.target);
+    observer.unobserve(entry.target );
 };
 
     const sectionObserver = new IntersectionObserver(revealSection, {
