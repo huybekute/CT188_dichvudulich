@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/logo.png" type="image/x-ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/trangchu.css">
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="trangchu.html" class="header__logo"><img src="Image/logo.png" alt="MEANDRY"></a>
+            <nav class="header__nav">
+                <a href="trangchu.html">TRANG CHỦ</a>
+                <a href="gioithieu.html">GIỚI THIỆU</a>
+                <a href="tourdulich.html">TOUR DU LỊCH</a>
+                <a href="dangnhap.html">ĐĂNG NHẬP</a>
+                <a href="dangky.html">ĐĂNG KÝ</a>
+                <a href="giohang.html" class="fa fa-shopping-cart"></a>
+            </nav>
+        </div>
+    </header>
+    <main class="cart">
+        <div class="cart__container">
+            <h1>Danh Sách Đã Thích</h1>
+            <div id="cartItem" class="cart__divItem"></div>
+            <!-- onclick gọi hàm toogle(e) (hàm chuyển đổi) trong file JS để hiển thị thông báo đã gửi thông tin thành công -->
+            <button class="cart__button--consult" id="hideButton" onclick="toogle(1)" >Gửi Thông Tin</button> 
+            <a class="cart__backbutton" href="tourdulich.html">Quay Lại Trang Tour Du Lịch</a>
+        </div> 
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <h1 class="footer__h1">Kết nối với chúng tôi</h1>
+            <div class="footer__social">
+                <a class="footer__social-link" href="https://www.facebook.com/" role="button"><i class="fa fa-facebook-f"></i></a>
+                <a class="footer__social-link" href="https://www.instagram.com" role="button"><i class="fa fa-instagram"></i></a>
+                <a class="footer__social-link" href="https://www.youtube.com/" role="button"><i class="fa fa-youtube"></i></a>
+                <a class="footer__social-link" href="https://www.twitter.com/" role="button"><i class="fa fa-twitter"></i></a>  
+                <a class="footer__social-link" href="trangchu.html" role="button"><i class="fa fa-home"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__contact">
+            <h1 class="footer__h1">Thông tin liên hệ</h1>
+            <p><i class="fa fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</p>
+            <p><i class="fa fa-envelope "></i> meandry@gmail.com</p>
+            <p><i class="fa fa-phone "></i> 0123 456 789</p>
+        </div>
+
+        <div class="footer__services">
+            <h1 class="footer__h1">Hỗ trợ khách hàng</h1>
+            <a href="" class="footer__services-item">Chính sách bảo mật</a>
+            <a href="" class="footer__services-item">Hướng dẫn đặt tour</a>
+            <a href="" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
+            <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
+        </div>
+    </footer>
+    <script src="giohang.js"></script>
+</body>
+</html>
