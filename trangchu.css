@@ -71,6 +71,7 @@ main{
     align-items: center;
     gap: 1.25rem;
     flex-wrap: nowrap; /*coi ki*/
+    font-size: 1.3rem;
 }
 
 
