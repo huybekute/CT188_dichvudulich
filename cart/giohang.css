@@ -1,0 +1,62 @@
+/* Nguyen Van Hoang Huy - B2308362 */
+
+/* Danh cho gio hang  */
+
+.cart__container{
+    margin: auto;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    /* background: url(../Image/home-bg.jpg) no-repeat center center/cover ; */
+}
+
+
+.cart__container h1{
+    margin: 1.25rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+.cartItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+.cart__button--consult{
+    display: inline-block;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    color: #FFFF00;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    background-color: #FF0000;
+}
+
+.cart__button--consult:hover{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.cart__backbutton{
+    background-color: #6D767D;
+    display: inline-block;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cart__backbutton:hover{
+    background-color: rgba(108, 117, 125, 0.9);
+}
