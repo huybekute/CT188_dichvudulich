@@ -15,8 +15,15 @@
         <div class="header__container">
             <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
-                <a href="../signin/dangnhap.html">Đăng nhập</a>
-                <a href="../cart/giohang.html">Yêu thích </a>
+                <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
+                <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
+                <div class="header__hidden--account header__hidden--none" id="accountContent">
+                    <h1 id="result1"></h1>
+                    <p id="result2"></p>
+                    <a href="../about/infor.html" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
+                </div>
+                <a href="../cart/giohang.html" >Yêu thích</a>
                 <a href="../about/gioithieu.html">Về chúng tôi</a>
             </nav>
         </div>
@@ -27,7 +34,7 @@
             <div id="cartItem" class="cart__divItem"></div>
             <!-- onclick gọi hàm toogle(e) (hàm chuyển đổi) trong file JS để hiển thị thông báo đã gửi thông tin thành công -->
             <button class="cart__button--consult" id="hideButton" onclick="toogle(1)" >Gửi Thông Tin</button> 
-            <a class="cart__backbutton" href="tourdulich.html">Quay Lại Trang Tour Du Lịch</a>
+            <a class="cart__backbutton" href="../product/tourdulich.html">Quay Lại Trang Tour Du Lịch</a>
         </div> 
     </main>
     <footer class="footer">
@@ -57,6 +64,7 @@
             <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
         </div>
     </footer>
+    <script src="../common.js"></script>
     <script src="giohang.js"></script>
 </body>
 </html>
