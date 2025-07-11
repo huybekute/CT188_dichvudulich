@@ -253,6 +253,7 @@ main{
     outline: none;
     cursor: pointer;
     text-decoration: none;
+    transition: ease-in-out 0.2s;
 }
 
 .home__section2{
@@ -468,6 +469,21 @@ main{
 }
 
 
+/* Them filter brightness lam toi background */
+.home__section1::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  filter: brightness(0.5);
+  background: url(./Image/home-bg.jpg) no-repeat center center/cover;
+}
+
+
+/* Hieu ung khi hover */
+.home__div1 a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
 
 
