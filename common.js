@@ -1,3 +1,14 @@
+// cuon ve dau trang khi tai lai
+
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);  
+};
+
+
 const buttonAcc = document.getElementById("buttonAcc");
 const buttonSignin = document.getElementById("buttonSignin");
 const accountContent = document.getElementById("accountContent");
@@ -42,13 +53,13 @@ const week = [
 const dayofweek = today.getDay();
 
 buttonAcc.addEventListener("click", () =>{
-    if(accountContent.classList.contains("none")){
-        accountContent.classList.remove("none");
+    if(accountContent.classList.contains("header__hidden--none")){
+        accountContent.classList.remove("header__hidden--none");
         accountContent.classList.add("block");
     }
     else{
         accountContent.classList.remove("block");
-        accountContent.classList.add("none");
+        accountContent.classList.add("header__hidden--none");
     }
 });
 
