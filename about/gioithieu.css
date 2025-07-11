@@ -1,0 +1,386 @@
+/*-- B2303769_Nguyễn Minh Ngọc --*/
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    clear: both;
+}
+
+body {
+    display : flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main{
+    flex: 1;
+}
+
+/* Danh cho header */
+.header{
+    background-color: #ffffff;
+    width: 100%;
+    top: 0;
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    font-size: 18px;
+}
+
+.header__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img{
+    height: 70px;
+    width: auto;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+
+.header__nav a{
+    text-decoration: none;
+    color: #000000;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover{
+    color: #0000FF;
+    text-decoration: underline;
+    text-decoration-color: #0000FF;
+}
+
+
+/* Danh cho fooster */
+
+.footer{
+    background-color: #000000;
+    color: #ffffff;
+    height: auto;
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer__logo,
+.footer__contact,
+.footer__services{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social-link {
+  color: #fff;
+  font-size: 48px;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+  color: #feb47b;
+}
+
+
+.footer__contact p{
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer__h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.footer__services a{
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer__contact p:hover,
+.footer__services a:hover{
+    color: #feb47b;
+}
+
+.fa{
+    padding-right: 10px;
+}
+
+/* Danh cho trang gioi thieu */
+
+.about__main{ /*gc muc 1*/
+    display: grid;
+    grid-template-areas: 'intro' 'content' 'news';
+    width: 100%;
+}
+
+/*Phan gioi thieu*/
+.about__div1{
+    grid-template-areas: intro; /*gi cua muc I*/
+
+    display: flex; /*fc muc I*/
+    position: relative;
+    overflow: hidden;
+    background-image: url(../Image/about/about-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    z-index: 0;
+}
+
+.overlay{ /*fi cua I va fc cua I.1 /*---Lop phu mo---*/
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; /*fc cua I.1*/
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+}
+
+.about__intro{ /*fi cua I.1*/
+    color:#ffffff;
+    justify-content: center;
+    text-align: center;
+    
+    flex-direction: column;
+    z-index: 2;
+    animation: intro 2s linear;
+}
+
+.about__intro h1,
+.about__div3--title{
+    font-size: 54px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about__intro h3{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.about__intro a{
+    display: inline-block;
+    border: 3px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 40px;
+    margin: 18px 400px 0 400px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    animation: intro_link 2s linear;
+}
+
+.about__intro a:hover{
+    color: #81ecec;
+    border-color: #81ecec;
+}
+
+/*Phan content*/
+.about__div2{ /*gi cua I*/
+    grid-area: content;
+    
+    position: relative;
+    display: inline-block;
+    background-color: rgb(136, 162, 159);
+    color: #f7f1e3;
+    line-height: 1.2;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about__div2 p{
+    margin: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 16px;
+}
+
+/*Phan news*/
+.about__div3{ /*gi cua I va gc cua I.3*/ 
+    grid-area: news; display: grid; /*gc cua I.3 - nested grid I.3*/ 
+    grid-template-areas: 'about-div3-title' 'about-div3-content'; /*grid chia thanh 2 vung, co dang 2 hang, 1 cot*/ 
+}
+
+.about__div3{ 
+    position: relative; 
+    width: 100%; 
+    overflow: hidden; 
+    background-color: rgb(172, 191, 189); 
+    color: #130f40; 
+    box-sizing: border-box; 
+}
+
+.about__div3--title{ /*gi cua I.3*/ 
+    grid-area: about-div3-title; 
+    font-size: 45px; 
+    text-align: center; 
+    padding-top: 22px;
+}
+
+.about__container{ /*gi cua I.3*/ 
+    grid-area: about-div3-content;
+
+    display: flex; /*fc cua I.3.1*/
+    position: relative; 
+    margin: auto; 
+    box-sizing: border-box; 
+    justify-content: center; 
+} 
+
+.about__container--news, 
+.about__container--feelback{ /*fi cua I.3.1*/ 
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    height: 100%; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.about__container--news h2, 
+.about__container--feelback h2{ 
+    padding: 15px; 
+    font-size: 30px; 
+    text-align: center; 
+}
+
+.about__container--news img, 
+.about__container--feelback img{
+    width: 60%;
+}
+
+.about__container--news p, 
+.about__container--feelback p{ 
+    font-size: 16px; 
+    padding-bottom: 16px; 
+    align-items: center;
+    text-align: justify;
+    margin: auto 56px; 
+}
+
+/* Next & previous buttons */ 
+.prev, 
+.next{
+    position: absolute;
+    cursor: pointer;  
+    top: 50%; 
+    width: auto; 
+    padding: 16px;
+    margin-top: -22px;
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 18px; 
+    transition: 0.6s ease; 
+    border-radius: 0 3px 3px 0; 
+    user-select: none;
+} 
+
+.next{ 
+    right: 0; 
+    border-radius: 3px 0 0 3px;
+}
+
+.prev{ 
+    left: 0; 
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover{ 
+    background-color: rgba(0,0,0,0.8); 
+}
+
+.fade{
+    animation-name: fade; 
+    animation-duration: 1.5s; 
+}
+
+/*news buton*/ 
+.about__news-link, 
+.about__feelback-link{ 
+    display: inline-block; 
+    border: 2px solid #2c2c54; 
+    color: #2c2c54; 
+    border-radius: 20px; 
+    padding: 5px 40px; 
+    margin-top: 18px; 
+    margin-bottom: 18px; 
+    align-self: center; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+.about__news-link:hover, 
+.about__feelback-link:hover{ 
+    color: #7d5fff; 
+    border-color: #7d5fff; 
+}
+
+/*Thanh cuộn ở phần news*/ 
+.about__container--news, 
+.about__container--feelback{ 
+    scroll-snap-align: start; 
+}
+
+/*hiệu ứng chuyển động*/ 
+@keyframes intro{ 
+    from{ 
+        opacity: 0; 
+        transform: translateY(-5px); 
+    } 
+    to{ opacity: 1; 
+        transform: translateX(0px); 
+    } 
+}
+
+@keyframes intro_link{
+     from{ 
+        opacity: 0; 
+        transform: translateY(10px); 
+    } 
+    to{ 
+        opacity: 1; 
+        transform: translateX(0px); 
+    } 
+}
