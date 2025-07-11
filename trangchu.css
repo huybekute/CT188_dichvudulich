@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lora', sans-serif;
 }
 
 body {
@@ -97,7 +98,7 @@ main{
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0 , 0 , 0, 0.2);
     top: 4.5rem;
-    right: 28rem;
+    right: 2.75rem;
     border-radius: 0.25rem;
     padding: 0.625rem;
 }
@@ -220,7 +221,8 @@ main{
     color: #feb47b;
 }
 
-.fa{
+.fas,
+.fab{
     padding-right: 1rem;
 }
 

@@ -80,25 +80,38 @@ if (currentUserData) {
             // Lưu trạng thái đăng nhập
             localStorage.setItem("currentUser", email);
 
-            alert("Đăng nhập thành công!");
-
-            // Hiển thị lời chào người dùng
-            const welcomeEl = document.getElementById("welcomeUser");
-            if (welcomeEl) {
-                welcomeEl.textContent = `Xin chào, ${userData.fullname}!`;
-                welcomeEl.style.color = "#2e8b57";
-                welcomeEl.style.fontWeight = "bold";
-                welcomeEl.style.marginBottom = "10px";
-            }
-
             form.reset();
-            window.location.href = "trangchu.html"; // Chuyển hướng sau khi đăng nhập
+            window.location.href = "../trangchu.html"; // Chuyển hướng sau khi đăng nhập
         });
     }
 }
 
+const emailInput = document.getElementById("email");
 const togglePassword = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");
+
+// hiển thị thông báo bắt buộc nhập thông tin
+emailInput.addEventListener("invalid", () => {
+  if (emailInput.validity.valueMissing) {
+    emailInput.setCustomValidity("Vui lòng nhập email");
+  } else if (emailInput.validity.typeMismatch) {
+    emailInput.setCustomValidity("Email không đúng định dạng");
+  } else {
+    emailInput.setCustomValidity("");
+  }
+});
+
+emailInput.addEventListener("input", () => {
+    emailInput.setCustomValidity("");
+})
+
+passwordInput.addEventListener("invalid", () => {
+  passwordInput.setCustomValidity("Vui lòng nhập mật khẩu");
+});
+
+passwordInput.addEventListener("input", () => {
+  passwordInput.setCustomValidity(""); 
+});
 
 if (togglePassword && passwordInput) {
     togglePassword.addEventListener("click", function () {
@@ -108,4 +121,3 @@ if (togglePassword && passwordInput) {
         this.classList.toggle("fa-eye-slash");
     });
 }
-  

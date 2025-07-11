@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Image/logo.png" type="image/x-ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../trangchu.css">
     <link rel="stylesheet" href="giohang.css">
@@ -15,17 +16,17 @@
         <div class="header__container">
             <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
+                <a href="../product/tourdulich.html">Tour du lịch</a>
+                <a href="../cart/giohang.html" id="cartButton">Yêu thích</a>
+                <a href="../about/gioithieu.html">Về chúng tôi</a>
                 <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
                 <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
                 <div class="header__hidden--account header__hidden--none" id="accountContent">
                     <h1 id="result1"></h1>
                     <p id="result2"></p>
-                    <a href="../about/infor.html" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout">Thông tin tài khoản</a>
                     <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
                 </div>
-                <a href="../product/tourdulich.html">Tour du lịch</a>
-                <a href="../cart/giohang.html" >Yêu thích</a>
-                <a href="../about/gioithieu.html">Về chúng tôi</a>
             </nav>
         </div>
     </header>
@@ -34,8 +35,8 @@
             <h1>Danh Sách Yêu Thích</h1>
             <div id="cartItem" class="cart__divItem"></div>
             <!-- onclick gọi hàm toogle(e) (hàm chuyển đổi) trong file JS để hiển thị thông báo đã gửi thông tin thành công -->
-            <button class="cart__button--consult" id="hideButton" onclick="toogle(1)" >Gửi Thông Tin</button> 
-            <a class="cart__backbutton" href="../product/tourdulich.html">Quay Lại Trang Tour Du Lịch</a>
+            <button class="cart__button--consult" id="hideButton" onclick="toogle(1)" >Gửi thông tin</button> 
+            <a class="cart__backbutton" href="../product/tourdulich.html">Quay lại trang tour du lịch</a>
         </div> 
     </main>
     <footer class="footer">

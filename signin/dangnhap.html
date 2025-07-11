@@ -9,6 +9,7 @@
     <link rel="icon" href="../Image/logo.png" type="image/x-ico" />
     <link rel="stylesheet" href="./dangnhap.css">
     <link rel="stylesheet" href="../trangchu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -18,17 +19,17 @@
         <div class="header__container">
             <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
+                <a href="../product/tourdulich.html">Tour du lịch</a>
+                <a href="../cart/giohang.html" id="cartButton">Yêu thích</a>
+                <a href="../about/gioithieu.html">Về chúng tôi</a>
                 <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
                 <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
                 <div class="header__hidden--account header__hidden--none" id="accountContent">
                     <h1 id="result1"></h1>
                     <p id="result2"></p>
-                    <a href="../about/infor.html" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout">Thông tin tài khoản</a>
                     <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
                 </div>
-                <a href="../product/tourdulich.html">Tour du lịch</a>
-                <a href="../cart/giohang.html" >Yêu thích</a>
-                <a href="../about/gioithieu.html">Về chúng tôi</a>
             </nav>
         </div>
     </header>
@@ -39,12 +40,10 @@
         <p> "Hãy đăng nhập để tiếp tục khám phá những tour du lịch hấp dẫn dành riêng cho bạn".</p>
         <form id="signinForm" class="signin__form--login">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Nhập email" required>
-
+            <input type="email" id="email" placeholder="Nhập email" required/>
             <label for="password">Mật khẩu *</label>
             <div class="password-wrapper">
-                <input type="password" id="password" name="password" class="signin__input" placeholder="Nhập mật khẩu"
-                    required>
+                <input type="password" id="password" name="password" class="signin__input" placeholder="Nhập mật khẩu" required/>
                 <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
             </div>
 
@@ -60,39 +59,37 @@
         </form>
         </div>
     </main>
-
     <footer class="footer">
-        <div class="footer__section footer__section--logo">
-            <h1 class="footer__title">Kết nối với chúng tôi</h1>
+        <div class="footer__logo">
+            <h1 class="footer__h1">Kết nối với chúng tôi</h1>
             <div class="footer__social">
                 <a class="footer__social-link" href="https://www.facebook.com/" role="button"><i
-                        class="fa-brands fa-facebook-f"></i></a>
+                        class="fab fa-facebook-f"></i></a>
                 <a class="footer__social-link" href="https://www.instagram.com" role="button"><i
-                        class="fa-brands fa-instagram"></i></a>
+                        class="fab fa-instagram"></i></a>
                 <a class="footer__social-link" href="https://www.youtube.com/" role="button"><i
-                        class="fa-brands fa-youtube"></i></a>
+                        class="fab fa-youtube"></i></a>
                 <a class="footer__social-link" href="https://www.twitter.com/" role="button"><i
-                        class="fa-brands fa-twitter"></i></a>
-                <a class="footer__social-link" href="trangchu.html" role="button"><i class="fa-solid fa-home"></i></a>
+                        class="fab fa-twitter"></i></a>
+                <a class="footer__social-link" href="../trangchu.html" role="button"><i class="fa fa-home"></i></a>
             </div>
         </div>
 
-        <div class="footer__section footer__section--contact">
-            <h1 class="footer__title">Thông tin liên hệ</h1>
-            <p class="footer__item"><i class="fa fa-home"></i> ABC, Ninh Kiều, Cần Thơ</p>
-            <p class="footer__item"><i class="fa fa-envelope"></i> meandry@gmail.com</p>
-            <p class="footer__item"><i class="fa fa-phone"></i> 0123 456 789</p>
+        <div class="footer__contact">
+            <h1 class="footer__h1">Thông tin liên hệ</h1>
+            <p><i class="fas fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</p>
+            <p><i class="fas fa-envelope "></i> meandry@gmail.com</p>
+            <p><i class="fas fa-phone "></i> 0123 456 789</p>
         </div>
 
-        <div class="footer__section footer__section--services">
-            <h1 class="footer__title">Hỗ trợ khách hàng</h1>
-            <a href="#" class="footer__link">Chính sách bảo mật</a>
-            <a href="#" class="footer__link">Hướng dẫn đặt tour</a>
-            <a href="#" class="footer__link">Chính sách Thanh toán và Hủy Tour</a>
-            <a href="#" class="footer__link">Các câu hỏi thường gặp</a>
+        <div class="footer__services">
+            <h1 class="footer__h1">Hỗ trợ khách hàng</h1>
+            <a href="" class="footer__services-item">Chính sách bảo mật</a>
+            <a href="" class="footer__services-item">Hướng dẫn đặt tour</a>
+            <a href="" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
+            <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
         </div>
     </footer>
-
     <script src="../common.js"></script>
     <script src="./dangnhap.js"></script>
 </body>

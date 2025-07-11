@@ -15,8 +15,10 @@ const accountContent = document.getElementById("accountContent");
 const buttonSignout = document.getElementById("buttonSignout");
 const textTitle = document.getElementById("result1");
 const textDesc = document.getElementById("result2");
-const user = localStorage.getItem("currentUser");
 const cartButton = document.getElementById("cartButton");
+const email = localStorage.getItem("currentUser");
+
+
 
 // Hiển thị ngày giờ hiện tại
 function greetingTime() {
@@ -86,9 +88,19 @@ buttonSignout.addEventListener("click", () => {
     window.location.href = "../trangchu.html";
 })
 
+
+// lay fullName cua nguoi dung hien tai
+let userData = null;
+if (email) {
+  const storedUser = localStorage.getItem(`user_${email}`);
+  if (storedUser) {
+    userData = JSON.parse(storedUser);
+  }
+}
+
 //Hienthi thong bao cua tai khoan
 function innerName() {
-    textTitle.innerHTML = `Xin chào, ${user}`;
+    textTitle.innerHTML = `Xin chào, ${userData.fullname}`;
     textDesc.innerHTML = `${gtMessage} today is ${week[dayofweek]}, ${date}/${month}/${year}`;
 }
 innerName();
@@ -101,7 +113,7 @@ function moveToCart() {
 cartButton.addEventListener("click", (event) => {
   if (!isLogIn()) {
     event.preventDefault();
-    alert("Vui lòng đăng nhập để xem giỏ hàng");
-    return;
+    alert("Vui lòng đăng nhập để xem");
+    window.location.href = "../signin/dangnhap.html";
   } else moveToCart();
 });
