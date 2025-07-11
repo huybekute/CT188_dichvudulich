@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
-    <link rel="stylesheet" href="dangnhap.css">
+    <link rel="icon" href="../Image/logo.png" type="image/x-ico" />
+    <link rel="stylesheet" href="./dangnhap.css">
+    <link rel="stylesheet" href="../trangchu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -13,20 +16,19 @@
 
     <header class="header">
         <div class="header__container">
-            <a href="../trangchu.html" class="header__logo">
-                <img src="../Image/logo.png" alt="MEANDRY" class="header__logo-image">
-            </a>
+            <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
-                <a href="../trangchu.html" class="header__link">TRANG CHỦ</a>
-                <a href="../about/gioithieu.html" class="header__link">GIỚI THIỆU</a>
-                <a href="../product/tourdulich.html" class="header__link">TOUR DU LỊCH</a>
-                <!-- <a href="../cart/giohang.html" class="header__cart fa fa-shopping-cart"></a> -->
-                <a href="../signin/dangnhap.html" class="header__link" id="loginLink">ĐĂNG NHẬP</a>
-                <a href="../signup/dangky.html" class="header__link" id="signupLink">ĐĂNG KÝ</a>
-                <span id="userGreeting" style="display: none; font-weight: bold; margin-left: 10px;"></span>
-                <button id="logoutBtn"
-                    style="display: none; background-color: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; margin-left: 10px;">Đăng
-                    xuất</button>
+                <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
+                <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
+                <div class="header__hidden--account header__hidden--none" id="accountContent">
+                    <h1 id="result1"></h1>
+                    <p id="result2"></p>
+                    <a href="../about/infor.html" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
+                </div>
+                <a href="../product/tourdulich.html">Tour du lịch</a>
+                <a href="../cart/giohang.html" >Yêu thích</a>
+                <a href="../about/gioithieu.html">Về chúng tôi</a>
             </nav>
         </div>
     </header>
@@ -91,8 +93,8 @@
         </div>
     </footer>
 
-    <script src="dangnhap.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../common.js"></script>
+    <script src="./dangnhap.js"></script>
 </body>
 
 </html>

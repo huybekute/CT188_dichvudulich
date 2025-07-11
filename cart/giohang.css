@@ -33,14 +33,14 @@
     border: none;
     border-radius: 0.3125rem;
     cursor: pointer;
-    color: #FFFF00;
+    color: #000000;
     font-size: 0.9375rem;
     font-weight: bold;
-    background-color: #FF0000;
+    background-color: yellow;
 }
 
 .cart__button--consult:hover{
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(229, 255, 0, 0.8);
 }
 
 .cart__backbutton{
