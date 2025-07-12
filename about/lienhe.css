@@ -1,27 +1,15 @@
 /* B2303831 Dang Hoang Nghia */
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.contact__main {
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Be Vietnam Pro", sans-serif; */
+  font-family: "Lora", sans-serif;
+}
+
+.contact__main {
   height: 100vh;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #e9e9e9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #a1a1a1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #797979;
 }
 
 html {
@@ -57,7 +45,7 @@ html {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  background: linear-gradient(to top, rgb(255, 255, 255), #fcfeff);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.322), #fcfeff);
   padding: 1rem;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
   gap: 16px;
@@ -150,7 +138,7 @@ html {
 
 /* contact form button */
 .contact__form--button {
-  background: linear-gradient(120deg, rgb(22, 22, 22), rgb(49, 49, 49));
+  background: linear-gradient(90deg, rgb(124, 192, 130), rgb(93, 182, 120));
   color: white;
   display: flex;
   justify-self: center;
@@ -160,14 +148,13 @@ html {
   padding: 8px 32px;
   font-size: 1.5rem;
   font-weight: bold;
-  transition-duration: 0.5s;
-  transition-property: all;
+  transition: ease-in-out 0.2s;
 }
 
 .contact__form--button:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   box-shadow: 0.25rem 0.25rem 0.25rem rgba(114, 114, 114, 0.5);
-  background: linear-gradient(120deg, rgb(0, 0, 0), rgb(49, 49, 49));
+  background: linear-gradient(120deg, rgb(154, 212, 178), rgb(145, 221, 155));
 }
 
 .contact__info--text {

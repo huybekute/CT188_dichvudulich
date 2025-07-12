@@ -1,3 +1,5 @@
+// B2303769_Nguyen Minh Ngoc
+//Tham khảo mã nguồn: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
