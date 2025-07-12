@@ -1,3 +1,32 @@
+// TÀI KHOẢN NGƯỜI DÙNG
+const defaultUsers = [
+    {
+        fullname: "Nguyễn Văn A",
+        email: "nva@gmail.com",
+        phone: "0123456789",
+        password: "123456",
+        address: "Cần Thơ",
+        contact: ["Zalo"]
+    },
+    {
+        fullname: "Trần Thị B",
+        email: "ttb@gmail.com",
+        phone: "0987654321",
+        password: "abcdef",
+        address: "Hà Nội",
+        contact: ["Điện thoại"]
+    }
+];
+
+// Lưu vào localStorage 
+defaultUsers.forEach(user => {
+    const key = `user_${user.email}`;
+    if (!localStorage.getItem(key)) {
+        localStorage.setItem(key, JSON.stringify(user));
+    }
+});
+
+
 const form = document.getElementById("signupForm");
 
 if (form) {

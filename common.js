@@ -101,7 +101,7 @@ if (email) {
 //Hienthi thong bao cua tai khoan
 function innerName() {
     textTitle.innerHTML = `Xin chào, ${userData.fullname}`;
-    textDesc.innerHTML = `${gtMessage} today is ${week[dayofweek]}, ${date}/${month}/${year}`;
+    textDesc.innerHTML = `${gtMessage}, today is ${week[dayofweek]}, ${date}/${month}/${year}`;
 }
 if(userData){
   innerName();
