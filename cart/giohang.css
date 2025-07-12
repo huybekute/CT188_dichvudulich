@@ -2,6 +2,10 @@
 
 /* Danh cho gio hang  */
 
+.cart{
+    min-height: 50vh;
+}
+
 .cart__container{
     margin: auto;
     padding: 1.25rem;
