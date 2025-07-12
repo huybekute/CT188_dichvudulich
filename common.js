@@ -103,7 +103,9 @@ function innerName() {
     textTitle.innerHTML = `Xin chào, ${userData.fullname}`;
     textDesc.innerHTML = `${gtMessage} today is ${week[dayofweek]}, ${date}/${month}/${year}`;
 }
-innerName();
+if(userData){
+  innerName();
+}
 
 function moveToCart() {
   window.location.href = "./cart/giohang.html";

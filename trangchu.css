@@ -98,7 +98,7 @@ main{
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0 , 0 , 0, 0.2);
     top: 4.5rem;
-    right: 2.75rem;
+    right: 2.5rem;
     border-radius: 0.25rem;
     padding: 0.625rem;
 }
@@ -162,12 +162,13 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-    padding-top: 20px;
+    padding: 5rem 0;
 }
 
 .footer__logo,
 .footer__contact,
-.footer__services{
+.footer__services,
+.footer__location{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -182,7 +183,7 @@ main{
 
 .footer__social-link {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-right: 0.0625rem;
   transition: color 0.3s ease;
 }
@@ -208,7 +209,8 @@ main{
     padding: 0;
 }
 
-.footer__services a{
+.footer__services-item,
+.footer__location-item{
     font-size: 1.25rem;
     color: #ffffff;
     text-decoration: none;
@@ -217,12 +219,14 @@ main{
 }
 
 .footer__contact p:hover,
-.footer__services a:hover{
+.footer__services a:hover,
+.footer__location a:hover{
     color: #feb47b;
 }
 
 .fas,
-.fab{
+.fab,
+.fa-solid{
     padding-right: 1rem;
 }
 

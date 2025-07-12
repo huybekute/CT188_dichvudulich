@@ -8,12 +8,14 @@ if (form) {
         const email = form.email.value.trim();
         const phone = form.phone.value.trim();
         const password = form.password.value.trim();
+        const confirmPassword = form.confirmPassword.value.trim();
         const address = form.address.value.trim();
         const checked = form.querySelectorAll('input[name="contact[]"]:checked');
+        const storedUser = localStorage.getItem(`user_${email}`);
 
         // Kiểm tra bắt buộc
         if (!fullname || !email || !phone || !password) {
-            alert("Vui lòng điền đầy đủ các trường bắt buộc.");
+            alert("Vui lòng nhập đầy đủ thông tin.");
             return;
         }
 
@@ -24,10 +26,26 @@ if (form) {
             return;
         }
 
+        if (storedUser) {
+            alert("Email đã được đăng ký")
+            return;
+        }
+
         // Kiểm tra định dạng số điện thoại
         const phoneRegex = /^\d{9,11}$/;
         if (!phoneRegex.test(phone)) {
             alert("Số điện thoại không hợp lệ. Vui lòng nhập từ 9 đến 10 chữ số.");
+            return;
+        }
+        
+        //check password
+        if(password.length < 6){
+            alert("Mật khẩu phải có ít nhất 6 ký tự");
+            return;
+        }
+
+        if(password != confirmPassword){
+            alert("Mật khẩu không khớp");
             return;
         }
 
@@ -51,8 +69,13 @@ if (form) {
         localStorage.setItem(`user_${email}`, JSON.stringify(userData));
         alert("Đăng ký thành công! Thông tin đã được lưu.");
         form.reset();
+
+        window.location.href = "../signin/dangnhap.html";
     });
 }
+
+//hiển thị mật khẩu
+
 const togglePassword = document.getElementById("togglePassword");
 const passwordInput = document.getElementById("password");
 
@@ -63,4 +86,16 @@ if (togglePassword && passwordInput) {
         this.classList.toggle("fa-eye");
         this.classList.toggle("fa-eye-slash");
     });
+}
+
+const togglePasswordConfirm = document.getElementById("togglePasswordConfirm");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+
+if(togglePasswordConfirm && confirmPasswordInput) {
+    togglePasswordConfirm.addEventListener("click", function(){
+        const type = confirmPasswordInput.getAttribute("type") === "password" ? "text" : "password";
+        confirmPasswordInput.setAttribute("type", type);
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+    })
 }

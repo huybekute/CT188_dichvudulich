@@ -2,12 +2,12 @@
 .about_signin {
   width: 100%;
   max-width: 500px;
-  margin: 100px auto;
+  margin: 40px auto 100px;
   background-color: #ffffff;
   padding: 50px 40px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -19,16 +19,16 @@
   text-align: center;
 }
 
+.signin__form--login {
+  display: flex;
+  flex-direction: column;
+}
+
 .about_signin p {
   font-size: 17px;
   color: #111;
   margin-bottom: 25px;
   text-align: center;
-}
-
-.signin__form--login {
-  display: flex;
-  flex-direction: column;
 }
 
 .signin__form--login label {
@@ -55,7 +55,7 @@
 .password-wrapper {
   position: relative;
 }
-
+/* 
 #togglePassword {
   position: absolute;
   right: 10px;
@@ -63,7 +63,7 @@
   transform: translateY(-50%);
   cursor: pointer;
   color: #888;
-}
+} */
 
 .signin_btn--login {
   background-color: #f0c14b;
@@ -121,4 +121,9 @@
   cursor: pointer;
   color: #888;
   font-size: 18px;
+}
+
+.sigin__required{
+  color: red;
+  font-weight: bold;
 }

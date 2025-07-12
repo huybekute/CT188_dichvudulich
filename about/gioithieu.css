@@ -350,6 +350,7 @@ main{
     align-self: center; 
     font-size: 16px; 
     cursor: pointer; 
+    text-decoration: none;
 }
 
 .about__news-link:hover, 
