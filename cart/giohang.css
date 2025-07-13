@@ -125,6 +125,7 @@
   gap: 0px;
   padding: 0px;
   border-radius: 20px;
+  min-height: 100vh;
 }
 
 /* tour du lịch */
@@ -137,8 +138,8 @@
 
 .tour__title {
   font-size: 36px;
-  margin-bottom: 20px;
-  margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 1rem;
   color: #006400;
   font-weight: bold;
   text-align: center;
@@ -146,7 +147,7 @@
 
 .tour__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -178,6 +179,7 @@
   font-size: 22px;
   color: #161614;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .tour__desc {
@@ -194,10 +196,12 @@
   display: inline-block;
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 12px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   border: 3px solid #daa520;
   text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .tour__details {
@@ -229,6 +233,23 @@
   transition: background-color 0.3s ease;
 }
 
+.tour__unfavorite--button {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 12px;
+  background-color: #006400;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .tour__button:hover {
   background: rgba(42, 96, 63, 0.763);
 }
@@ -243,43 +264,4 @@
   .tour__grid {
     grid-template-columns: 1fr;
   }
-}
-
-#cart {
-  background-color: #ffffff;
-  border: 2px solid #006400;
-  border-radius: 12px;
-  padding: 16px;
-  margin-top: 70px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#cart-list li {
-  margin-bottom: 10px;
-}
-
-#cart input[type="number"] {
-  width: 50px;
-  margin: 0 8px;
-}
-
-#cart button {
-  margin-top: 8px;
-  background-color: rgb(12, 77, 52);
-  color: white;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#cart h3 {
-  color: #006400;
-}
-
-.cart-icon {
-  width: 23px; /* Kích thước ảnh */
-  height: auto;
-  display: block;
-  margin-bottom: 12px; /* Căn giữa và cách dưới một chút */
 }

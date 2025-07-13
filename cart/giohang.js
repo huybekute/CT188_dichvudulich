@@ -78,8 +78,144 @@ function checkOutTour() {
     displayTourCart();
 }
 
+function displayFavoriteTours() {
+    let tourGrid = document.getElementById("tour__grid");
+    const favorites = localStorage.getItem("favorites") || [];
+
+    tourGrid.innerHTML = "";
+
+    if (favorites.length === 0) {
+        tourGrid.innerHTML = "<p>Danh sách yêu thích hiện đang trống</p>";
+    }
+
+    let favoriteTourContent = "";
+
+    if (favorites.includes(1)) {
+        favoriteTourContent += `
+         <div class="tour__item">
+            <img src="../Image/product/choco.jpg" alt="Chợ cổ Cần Thơ">
+            <h2>Chợ Cổ Cần Thơ</h2>
+            <p class="tour__price">
+                <span>Giá: 850.000<sup>đ</sup></span>
+            </p>
+
+            <ul class="tour__details">
+                <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                <li><strong>🚌 Phương tiện:</strong> Xe </li>
+            </ul>
+            <button class="tour__button" data-id="1" data-name="Chợ Cổ Cần Thơ" data-price="850000">Đặt tour</button>
+            <button class="tour__unfavorite--button" data-id="1" >Bỏ yêu thích</button>
+        </div>
+        `;
+    }
+
+    if (favorites.includes(2)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+                <img src="../Image/product/chonoi.jpg" alt="Chợ nổi Cái Răng">
+                <h2>Chợ Nổi Cái Răng</h2>
+                <p class="tour__price">
+                    <span>Giá: 1.050.000<sup>đ</sup></span>
+                </p>
+                <ul class="tour__details">
+                    <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                    <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                    <li><strong>🚌 Phương tiện:</strong> Thuyền </li>
+                </ul>
+                <button class="tour__button" data-id="2" data-name="Chợ Nổi Cái Răng" data-price="1050000">Đặt
+                    tour</button>
+                <button class="tour__unfavorite--button" data-id="2">Bỏ yêu thích</button>
+            </div>
+        `;
+    }
+
+    if (favorites.includes(3)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+            <img src="../Image/product/ninhkieu.jpg" alt="Bến Ninh Kiều">
+            <h2>Bến Ninh Kiều</h2>
+            <p class="tour__price">
+                <span>Giá: 850.000<sup>đ</sup></span>
+            </p>
+            <ul class="tour__details">
+                <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                <li><strong>🚌 Phương tiện:</strong> Du thuyền </li>
+            </ul>
+            <button class="tour__button" data-id="3" data-name="Bến Ninh Kiều" data-price="850000">Đặt
+                tour</button>
+            <button class="tour__unfavorite--button" data-id="3">Bỏ yêu thích</button>
+        </div>
+        `;
+    }
+
+    if (favorites.includes(4)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+            <img src="../Image/product/mykhanh.jpg" alt="Vườn Mỹ Khánh">
+            <h2>Khu Du Lịch Mỹ Khánh</h2>
+            <p class="tour__price">
+                <span>Giá: 1.150.000<sup>đ</sup></span>
+            </p>
+
+            <ul class="tour__details">
+                <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                <li><strong>🚌 Phương tiện:</strong> Xe </li>
+            </ul>
+            <button class="tour__button" data-id="4" data-name="Khu Du Lịch Mỹ Khánh" data-price="1150000">Đặt tour</button>
+            <button class="tour__unfavorite--button" data-id="4">Bỏ yêu thích</button>
+        </div>
+        `;
+    }
+
+    if (favorites.includes(5)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+            <img src="../Image/product/vuonco.jpg" alt="Vườn cò Bằng Lăng">
+            <h2>Vườn Cò Bằng Lăng</h2>
+            <p class="tour__price">
+                <span>Giá: 1.150.000<sup>đ</span>
+            </p>
+            <ul class="tour__details">
+                <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                <li><strong>🚌 Phương tiện:</strong> Xe </li>
+            </ul>
+            <button class="tour__button" data-id="5" data-name="Vườn Cò Bằng Lăng" data-price="1150000">Đặt
+                tour</button>
+            <button class="tour__unfavorite--button" data-id="5">Bỏ yêu thích</button>
+        </div>
+        `;
+    }
+
+    if (favorites.includes(6)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+            <img src="../Image/product/truclam.jpg" alt="Thiền Viện Trúc Lâm Phương Nam">
+            <h2>Thiền Viện Trúc Lâm Phương Nam</h2>
+            <p class="tour__price">
+                <span class="label-price">Giá: 950.000<sup>đ</sup></span>
+            </p>
+
+            <ul class="tour__details">
+                <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                <li><strong>🚌 Phương tiện:</strong> Xe</li>
+            </ul>
+            <button class="tour__button" data-id="6" data-name="Thiền Viện Trúc Lâm Phương Nam"
+                data-price="950000">Đặt tour</button>
+            <button class="tour__unfavorite--button" data-id="6">Bỏ yêu thích</button>
+        </div>`;
+    }
+
+    tourGrid.innerHTML = favoriteTourContent;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     displayTourCart();
+    displayFavoriteTours();
 
     document.querySelectorAll(".tour__button").forEach(button => {
         button.addEventListener("click", addTourToCart);
