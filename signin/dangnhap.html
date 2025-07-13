@@ -9,13 +9,13 @@
     <link rel="icon" href="../Image/logo.png" type="image/x-ico" />
     <link rel="stylesheet" href="./dangnhap.css">
     <link rel="stylesheet" href="../trangchu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <!-- <header class="header">
         <div class="header__container">
             <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
@@ -32,7 +32,7 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <main class="about_signin">
         <h1 class="signin__title">Đăng nhập</h1>
@@ -40,10 +40,11 @@
         <p id="signinContent"> "Hãy đăng nhập để tiếp tục khám phá những tour du lịch hấp dẫn dành riêng cho bạn".</p>
         <form id="signinForm" class="signin__form--login">
             <label for="email">Email <span class="sigin__required">*</span></label>
-            <input type="email" id="email" placeholder="Nhập email" required/>
+            <input type="email" id="email" placeholder="Nhập email" required />
             <label for="password">Mật khẩu <span class="sigin__required">*</span></label>
             <div class="password-wrapper">
-                <input type="password" id="password" name="password" class="signin__input" placeholder="Nhập mật khẩu" required/>
+                <input type="password" id="password" name="password" class="signin__input" placeholder="Nhập mật khẩu"
+                    required />
                 <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
             </div>
 
@@ -56,9 +57,12 @@
             <div class="signin_register--link">
                 Bạn chưa có tài khoản? <a href="../signup/dangky.html">Tạo tài khoản</a>
             </div>
+
         </form>
+        <span class="homepage__button"><a href="../trangchu.html">Về trang chủ</a></span>
     </main>
-    <footer class="footer">
+
+    <!-- <footer class="footer">
         <div class="footer__logo">
             <h1 class="footer__h1">Kết nối với chúng tôi</h1>
             <div class="footer__social">
@@ -95,9 +99,9 @@
             <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Hậu Giang</a>
             <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Bến Tre</a>
         </div>
-    </footer>
-    <script src="../common.js"></script>
-    <script src="./dangnhap.js"></script>
+    </footer> -->
 </body>
+<script src="../common.js"></script>
+<script src="./dangnhap.js"></script>
 
 </html>

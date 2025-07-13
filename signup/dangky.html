@@ -8,12 +8,12 @@
     <title>Đăng ký</title>
     <link rel="stylesheet" href="../trangchu.css">
     <link rel="stylesheet" href="./dangky.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <div class="header__container">
             <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
@@ -30,13 +30,13 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <main class="about_signup">
         <h1 class="signup__title">Đăng ký</h1>
-        <form id="signupForm" class="signup__form--login" action="#" method="POST"> 
+        <form id="signupForm" class="signup__form--login" action="#" method="POST">
             <label for="fullname">Họ và tên <span class="sigup__required">*</span></label>
-            <input type="text" id="fullname" name="fullname" class="signup__input" placeholder="Họ và tên" required/>
+            <input type="text" id="fullname" name="fullname" class="signup__input" placeholder="Họ và tên" required />
 
             <label for="email">Email <span class="sigup__required">*</span></label>
             <input type="email" id="email" name="email" class="signup__input" placeholder="Email" required>
@@ -46,12 +46,14 @@
 
             <label for="password">Mật khẩu <span class="sigup__required">*</span></label>
             <div class="password-wrapper">
-                <input type="password" id="password" name="password" class="signup__input" placeholder="Mật khẩu" required>
+                <input type="password" id="password" name="password" class="signup__input" placeholder="Mật khẩu"
+                    required>
                 <i class="fa-solid fa-eye-slash toggle-password" id="togglePassword"></i>
             </div>
             <label for="confirmPassword">Nhập lại mật khẩu <span class="sigup__required">*</span></label>
             <div class="password-wrapper">
-                <input type="password" id="confirmPassword" name="confirmPassword" class="signup__input" placeholder="Mật khẩu" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="signup__input"
+                    placeholder="Mật khẩu" required>
                 <i class="fa-solid fa-eye-slash toggle-password" id="togglePasswordConfirm"></i>
             </div>
 
@@ -69,9 +71,10 @@
             <button type="submit" class="signup__button">Đăng ký</button>
             <p class="signup__link">Bạn đã có tài khoản? <a href="../signin/dangnhap.html">Đăng nhập tại đây</a></p>
         </form>
+        <span class="homepage__button"><a href="../trangchu.html">Về trang chủ</a></span>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="footer__logo">
             <h1 class="footer__h1">Kết nối với chúng tôi</h1>
             <div class="footer__social">
@@ -108,9 +111,9 @@
             <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Hậu Giang</a>
             <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Bến Tre</a>
         </div>
-    </footer>
-    <script src="../common.js"></script>
-    <script src="dangky.js"></script>
+    </footer> -->
 </body>
+<script src="../common.js"></script>
+<script src="dangky.js"></script>
 
 </html>

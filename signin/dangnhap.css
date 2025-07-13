@@ -1,15 +1,50 @@
 /* Phần dành cho trang đăng nhập */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: url(../Image/signin/wide-view-of-tra-su-flooded_1.jpg) center no-repeat;
+  filter: brightness(0.8);
+}
+
+.homepage__button a {
+  color: black;
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.homepage__button a:hover {
+  text-decoration: underline;
+}
+
 .about_signin {
   width: 100%;
-  max-width: 500px;
-  margin: 40px auto 100px;
+  max-width: 512px;
+  max-height: fit-content;
+  /* margin: 40px auto 100px; */
   background-color: #ffffff;
   padding: 50px 40px;
   border: 1px solid #ddd;
   border-radius: 8px;
   /* font-family: Arial, sans-serif; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .signin__title {
@@ -124,7 +159,7 @@
   font-size: 18px;
 }
 
-.sigin__required{
+.sigin__required {
   color: red;
   font-weight: bold;
 }

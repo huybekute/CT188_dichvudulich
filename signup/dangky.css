@@ -1,4 +1,40 @@
 /* Phần dành cho trang đăng ký */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  background: url(../Image/signup/imagedaidoanketvn-images-upload-nghipm-06112023-_anh-1-7.jpg) center no-repeat;
+  filter: brightness(0.8);
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+}
+
+.homepage__button a {
+  color: black;
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.homepage__button a:hover {
+  text-decoration: underline;
+}
+
 .about_signup {
   width: 100%;
   max-width: 500px;
@@ -12,6 +48,7 @@
 }
 
 .signup__title {
+  margin-top: 3rem;
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -27,7 +64,7 @@
 .signup__form--login label {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   color: #111;
 }
 
@@ -88,7 +125,7 @@
   text-decoration: underline;
 }
 
-.password-wrapper{
+.password-wrapper {
   position: relative;
 }
 
@@ -102,7 +139,7 @@
   font-size: 18px;
 }
 
-.sigup__required{
+.sigup__required {
   color: red;
   font-weight: bold;
 }
