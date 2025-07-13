@@ -111,19 +111,12 @@ function moveToCart() {
   window.location.href = "./cart/giohang.html";
 }
 
-//kiem tra neu da o page dangnhap
-
-function isOnSignIn() {
-  return window.location.pathname.includes("dangnhap.html");
-}
 
 // check neu ch dang nhap thi ko cho vao cart
 cartButton.addEventListener("click", (event) => {
   if (!isLogIn()) {
     event.preventDefault();
     alert("Vui lòng đăng nhập để xem");
-    if (!isOnSignIn()) {
-      window.location.href = "../signin/dangnhap.html";
-    }
+    window.location.href = "/../signin/dangnhap.html";
   } else moveToCart();
 });
