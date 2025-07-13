@@ -1,66 +1,285 @@
 /* Nguyen Van Hoang Huy - B2308362 */
-
+/* B2303831 Dang Hoang Nghia */
 /* Danh cho gio hang  */
 
-.cart{
-    min-height: 50vh;
+.cart__container {
+  font-size: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 16px;
+  margin: 0 auto;
 }
 
-.cart__container{
-    margin: auto;
-    padding: 1.25rem;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
-    /* background: url(../Image/home-bg.jpg) no-repeat center center/cover ; */
+.cartItem {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
 }
 
-
-.cart__container h1{
-    margin: 1.25rem;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #000000;
+.cart__alert {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.cartItem{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem;
+.cart__total {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.cart__button--consult{
-    display: inline-block;
-    padding: 0.625rem 0.9375rem;
-    margin-top: 1.25rem;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    color: #000000;
-    font-size: 0.9375rem;
-    font-weight: bold;
-    background-color: yellow;
+.cart__tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: #52976f 1px solid;
+  background-color: linear-gradient(to top, #599759, #fff);
+  box-shadow: 0 4px 4px rgba(42, 100, 61, 0.233);
+  border-radius: 8px;
 }
 
-.cart__button--consult:hover{
-    background-color: rgba(229, 255, 0, 0.8);
+.cart__tour--name {
+  text-align: center;
 }
 
-.cart__backbutton{
-    background-color: #6D767D;
-    display: inline-block;
-    padding: 0.625rem 0.9375rem;
-    margin-top: 1.25rem;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 0.9375rem;
-    font-weight: bold;
-    text-decoration: none;
+.cart__tour--price {
+  text-align: center;
 }
 
-.cart__backbutton:hover{
-    background-color: rgba(108, 117, 125, 0.9);
+#cart__title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cart__button {
+  width: 100%;
+  max-width: 256px;
+  padding: 1rem;
+  align-self: center;
+}
+
+.cart__tour--delete {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.cart__tour--delete:hover {
+  background-color: #a83e3e;
+}
+
+.cart__button--consult {
+  display: inline-block;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(121, 202, 101);
+  transition: 0.2s ease;
+}
+
+.cart__button--consult:hover {
+  background-color: rgba(52, 124, 62, 0.8);
+  color: white;
+}
+
+.cart__backbutton {
+  background-color: #6d767d;
+  display: inline-block;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.cart__backbutton:hover {
+  background-color: rgba(108, 117, 125, 0.9);
+}
+
+/* bộ lọc */
+.page__container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 0px;
+  padding: 0px;
+  border-radius: 20px;
+}
+
+/* tour du lịch */
+.tour__list {
+  margin-top: 0px;
+  padding: 20px 20px;
+  background-color: #f3f3f3;
+  text-align: left;
+}
+
+.tour__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #006400;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tour__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tour__item {
+  background-color: #f5f5f5;
+  border: 8px solid white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.tour__item:hover {
+  transform: translateY(-6px);
+}
+
+.tour__item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 3px solid #054d1a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ */
+}
+
+.tour__item h2 {
+  font-size: 22px;
+  color: #161614;
+  margin-bottom: 12px;
+}
+
+.tour__desc {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.tour__price {
+  background-color: goldenrod; /* đỏ rượu vang */
+  color: #aa2d2d; /* vàng ánh kim */
+  padding: 10px 16px;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 3px solid #daa520;
+  text-align: center;
+}
+
+.tour__details {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.tour__details li {
+  font-size: 18px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.tour__button {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 12px;
+  background-color: #006400;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tour__button:hover {
+  background: rgba(42, 96, 63, 0.763);
+}
+
+@media (max-width: 992px) {
+  .tour__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tour__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#cart {
+  background-color: #ffffff;
+  border: 2px solid #006400;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 70px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#cart-list li {
+  margin-bottom: 10px;
+}
+
+#cart input[type="number"] {
+  width: 50px;
+  margin: 0 8px;
+}
+
+#cart button {
+  margin-top: 8px;
+  background-color: rgb(12, 77, 52);
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#cart h3 {
+  color: #006400;
+}
+
+.cart-icon {
+  width: 23px; /* Kích thước ảnh */
+  height: auto;
+  display: block;
+  margin-bottom: 12px; /* Căn giữa và cách dưới một chút */
 }
