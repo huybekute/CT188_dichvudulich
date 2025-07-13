@@ -15,7 +15,7 @@ body {
 }
 
 body::before {
-  background: url(../Image/signup/imagedaidoanketvn-images-upload-nghipm-06112023-_anh-1-7.webp) center no-repeat;
+  background: url(../Image/signup/du-lich-mien-tay-top-travel.jpg) center/cover no-repeat;
   filter: brightness(0.8);
   position: absolute;
   content: "";
