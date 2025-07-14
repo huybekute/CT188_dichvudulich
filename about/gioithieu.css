@@ -232,8 +232,7 @@ about__intro
     text-align: center; 
 }
 
-.about__container--news img, 
-.about__feedback img{
+.about__container--news img{
     width: 60%;
 }
 
