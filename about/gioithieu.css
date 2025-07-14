@@ -215,7 +215,7 @@ about__intro
 } 
 
 .about__container--news, 
-.about__container--feelback{ /*fi cua I.3.1*/ 
+.about__feedback{ /*fi cua I.3.1*/ 
     display: flex; 
     flex-direction: column;
     width: 100%;
@@ -225,7 +225,7 @@ about__intro
 }
 
 .about__container--news h2, 
-.about__container--feelback h2{
+.about__feedback h2{
     /* font-family: "Be Vietnam Pro", sans-serif; */
     padding: 1rem; 
     font-size: 1.8rem; 
@@ -233,12 +233,12 @@ about__intro
 }
 
 .about__container--news img, 
-.about__container--feelback img{
+.about__feedback img{
     width: 60%;
 }
 
 .about__container--news p, 
-.about__container--feelback p{
+.about__feedback p{
     /* font-family: "Montserrat Alternates", sans-serif; */
     font-size: 1rem; 
     padding-bottom: 1rem; 

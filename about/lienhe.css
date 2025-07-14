@@ -8,10 +8,6 @@
   font-family: "Lora", sans-serif;
 }
 
-.contact__main {
-  height: 100vh;
-}
-
 html {
   scroll-behavior: smooth;
 }
