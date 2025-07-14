@@ -69,7 +69,7 @@ function addTourToCart(event) {
         existingTour.quantity += 1;
     } else {
         cart.push(tour);
-        alert(`${tour.name} đã được thêm vào giỏ hàng!`);
+        // alert(`${tour.name} đã được thêm vào giỏ hàng!`);
     }
     updateTourCart();
     displayTourCart();
