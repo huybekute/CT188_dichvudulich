@@ -161,6 +161,8 @@
   transition: transform 0.3s ease;
 }
 
+
+
 .tour__item:hover {
   transform: translateY(-6px);
 }
@@ -181,6 +183,8 @@
   color: #161614;
   margin-bottom: 12px;
   text-align: center;
+  line-height: 1;
+  min-height: calc(1em * 2);
 }
 
 .tour__desc {

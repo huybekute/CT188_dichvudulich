@@ -116,6 +116,7 @@ function displayFavoriteTours() {
 
     if (favorites.length === 0) {
         tourGrid.innerHTML = "<p>Danh sách yêu thích hiện đang trống</p>";
+        return;
     }
 
     let favoriteTourContent = "";
