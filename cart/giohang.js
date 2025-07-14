@@ -83,7 +83,7 @@ function removeTourFromCart(index) {
     updateTourCart();
     displayTourCart();
 
-    alert(`${tourName} đã được xóa khỏi giỏ hàng!`);
+    // alert(`${tourName} đã được xóa khỏi giỏ hàng!`);
 }
 
 function checkOutTour() {
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cart = [];
         updateTourCart();
         displayTourCart();
-        alert("Đã xóa toàn bộ tour");
+        // alert("Đã xóa toàn bộ tour");
     }
 });
 });

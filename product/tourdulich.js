@@ -69,7 +69,7 @@ function removeFavoriteTour(event) {
     favorites.splice(index, 1);
     updateFavoriteTour();
     
-    alert("Tour du lịch đã được loại bỏ khỏi danh sách yêu thích!");
+    // alert("Tour du lịch đã được loại bỏ khỏi danh sách yêu thích!");
     location.reload();
 }
 
