@@ -152,7 +152,7 @@ main{
 
 /* Danh cho fooster */
 
-.footer{
+.footer__top{
     background-color: #000000;
     color: #ffffff;
     height: auto;
@@ -229,6 +229,16 @@ main{
 .fa-solid{
     padding-right: 1rem;
 }
+
+.footer__copyright {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #f8f9fa !important;
+    background-color: #1a1a1a;
+}
+
 
 /* Danh cho trang chu */
 .home__section1{

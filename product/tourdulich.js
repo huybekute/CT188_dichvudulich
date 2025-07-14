@@ -1,5 +1,5 @@
 // B2303831 Dang Hoang Nghia
-
+/* Hứa Yến Nhi  B2305599 */
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 function updateFavoriteTour() {
@@ -8,23 +8,23 @@ function updateFavoriteTour() {
 let currentUser = localStorage.getItem("currentUser");
 
 const cartButton2 = document.getElementById("cartButton2");
-function isLogIn2() {
-    return localStorage.getItem("currentUser") !== null;
-}
+// function isLogIn2() {
+//     return localStorage.getItem("currentUser") !== null;
+// }
 
 
-function moveToCart2() {
-  window.location.href = "../cart/giohang.html";
-}
+// function moveToCart2() {
+//   window.location.href = "../cart/giohang.html";
+// }
 
 
-// check neu ch dang nhap thi ko cho vao cart
-cartButton2.addEventListener("click", (event) => {
-  if (!isLogIn2()) {
-    event.preventDefault();
-    alert("Vui lòng đăng nhập để xem");
-  } else moveToCart2();
-});
+// // check neu ch dang nhap thi ko cho vao cart
+// cartButton2.addEventListener("click", (event) => {
+//   if (!isLogIn2()) {
+//     event.preventDefault();
+//     alert("Vui lòng đăng nhập để xem");
+//   } else moveToCart2();
+// });
 
 
 function addFavoriteTour(event) {
