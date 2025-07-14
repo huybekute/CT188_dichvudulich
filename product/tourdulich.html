@@ -5,21 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour Du Lịch | Meandry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./tourdulich.css" />
+    <link rel="stylesheet" href="../trangchu.css">
 
 </head>
 
 <body>
     <header class="header">
         <div class="header__container">
-            <a href="tourdulich.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
+            <a href="../trangchu.html" class="header__logo"><img src="../Image/logo.png" alt="MEANDRY"></a>
             <nav class="header__nav">
-                <a href="../trangchu.html">Trang chủ</a>
-                <a href="../about/gioithieu.html">Về chúng tôi</a>
                 <a href="../product/tourdulich.html">Tour du lịch</a>
-                <a href="../signin/dangnhap.html">Đăng nhập</a>
-                <a href="../cart/giohang.html" class="fa fa-shopping-cart"></a>
+                <a href="../cart/giohang.html" id="cartButton">Yêu thích</a>
+                <a href="../about/gioithieu.html">Về chúng tôi</a>
+                <a href="#" class="header__account" id="buttonAcc">Tài khoản</a>
+                <a href="../signin/dangnhap.html" id="buttonSignin">Đăng nhập</a>
+                <div class="header__hidden--account header__hidden--none" id="accountContent">
+                    <h1 id="result1"></h1>
+                    <p id="result2"></p>
+                    <a href="#" class="header__account--signout">Thông tin tài khoản</a>
+                    <a href="#" class="header__account--signout" id="buttonSignout">Đăng xuất</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -152,33 +160,41 @@
             <h1 class="footer__h1">Kết nối với chúng tôi</h1>
             <div class="footer__social">
                 <a class="footer__social-link" href="https://www.facebook.com/" role="button"><i
-                        class="fa fa-facebook-f"></i></a>
+                        class="fab fa-facebook-f"></i></a>
                 <a class="footer__social-link" href="https://www.instagram.com" role="button"><i
-                        class="fa fa-instagram"></i></a>
+                        class="fab fa-instagram"></i></a>
                 <a class="footer__social-link" href="https://www.youtube.com/" role="button"><i
-                        class="fa fa-youtube"></i></a>
-                <a class="footer__social-link" href="https://www.twitter.com" role="button"><i
-                        class="fa fa-twitter"></i></a>
-                <a class="footer__social-link" href="trangchu.html" role="button"><i class="fa fa-home"></i></a>
+                        class="fab fa-youtube"></i></a>
+                <a class="footer__social-link" href="https://www.twitter.com/" role="button"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="footer__social-link" href="./trangchu.html" role="button"><i class="fa fa-home"></i></a>
             </div>
         </div>
 
         <div class="footer__contact">
             <h1 class="footer__h1">Thông tin liên hệ</h1>
-            <p><i class="fa fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</p>
-            <p><i class="fa fa-envelope "></i> meandry@gmail.com</p>
-            <p><i class="fa fa-phone "></i> 0123 456 789</p>
+            <p><i class="fas fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</p>
+            <p><i class="fas fa-envelope "></i> meandry@gmail.com</p>
+            <p><i class="fas fa-phone "></i> 0123 456 789</p>
         </div>
 
         <div class="footer__services">
             <h1 class="footer__h1">Hỗ trợ khách hàng</h1>
-            <a href="#" class="footer__services-item">Chính sách bảo mật</a>
-            <a href="#" class="footer__services-item">Hướng dẫn đặt tour</a>
-            <a href="#" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
-            <a href="#" class="footer__services-item">Các câu hỏi thường gặp</a>
+            <a href="" class="footer__services-item">Chính sách bảo mật</a>
+            <a href="" class="footer__services-item">Hướng dẫn đặt tour</a>
+            <a href="" class="footer__services-item">Chính sách Thanh toán và Hủy Tour</a>
+            <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
         </div>
-    </footer>
 
+        <div class="footer__location">
+            <h1 class="footer__h1">Điểm đến nổi bật</h1>
+            <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Cần Thơ</a>
+            <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Hậu Giang</a>
+            <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Bến Tre</a>
+        </div>
+
+    </footer>
+    <script src="../common.js"></script>
     <script src="./tourdulich.js"></script>
 </body>
 

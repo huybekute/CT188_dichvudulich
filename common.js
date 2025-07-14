@@ -117,6 +117,5 @@ cartButton.addEventListener("click", (event) => {
   if (!isLogIn()) {
     event.preventDefault();
     alert("Vui lòng đăng nhập để xem");
-    window.location.href = "../signin/dangnhap.html";
   } else moveToCart();
 });
