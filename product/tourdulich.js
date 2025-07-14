@@ -7,18 +7,19 @@ function updateFavoriteTour() {
 }
 let currentUser = localStorage.getItem("currentUser");
 
-const cartButton2 = document.getElementById("cartButton2");
-// function isLogIn2() {
-//     return localStorage.getItem("currentUser") !== null;
-// }
+
+const cartButton2 = document.querySelector(".tour__section--button");
+function isLogIn2() {
+    return localStorage.getItem("currentUser") !== null;
+}
 
 
-// function moveToCart2() {
-//   window.location.href = "../cart/giohang.html";
-// }
+function moveToCart2() {
+  window.location.href = "../cart/giohang.html";
+}
 
 
-// // check neu ch dang nhap thi ko cho vao cart
+// check neu ch dang nhap thi ko cho vao cart
 // cartButton2.addEventListener("click", (event) => {
 //   if (!isLogIn2()) {
 //     event.preventDefault();
@@ -26,6 +27,16 @@ const cartButton2 = document.getElementById("cartButton2");
 //   } else moveToCart2();
 // });
 
+if (cartButton2) {
+    cartButton2.addEventListener("click", (event) => {
+        if (!isLogIn2()) {
+            event.preventDefault();
+            alert("Vui lòng đăng nhập để xem");
+        } else {
+            moveToCart2();
+        }
+    });
+}
 
 function addFavoriteTour(event) {
     if(!currentUser){
@@ -73,3 +84,5 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", event => removeFavoriteTour(event));
     });
 });
+
+

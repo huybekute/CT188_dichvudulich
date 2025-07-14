@@ -12,25 +12,46 @@ function displayTourCart() {
     const cartContainer = document.getElementById("cartItem");
     const totalPrice = document.getElementById("totalPrice");
 
+    // update delete all button
+    const buttonDelete = document.getElementById("deleteButton");
+
+
     cartContainer.innerHTML = "";
+
+    
+    if (buttonDelete) {
+        buttonDelete.style.display = cart.length === 0 ? "none" : "inline-block";
+    }
 
     if (cart.length === 0) {
         cartContainer.innerHTML = `<span class="cart__alert">Giỏ hàng đang trống</span>`;
         totalPrice.textContent = "💰Tổng tiền: 0đ";
+        return;
     }
 
     cart.forEach((tour, index) => {
-        total += tour.price;
+        const stotal = tour.price * tour.quantity;
+        total += stotal;
         cartContainer.innerHTML += `
         <div class="cart__tour">
             <h4 class="cart__tour--name">${tour.name}</h4>
             <p class="cart__tour--price">Giá: ${tour.price.toLocaleString()}đ</p>
-            <button onclick="removeTourFromCart(${index})" class="cart__tour--delete">Xóa tour</button>
+            <div class = "cart__tour--qty">
+                <p>Số khách</p>
+                <button onclick="changeQty(${index}, -1)" class="buttonChange">-</button>
+                <span class="quantityChange">${tour.quantity}</span>
+                <button onclick="changeQty(${index},  1)" class="buttonChange">+</button>
+            </div>
+            <div class="cart__tour--action">
+                <button onclick="removeTourFromCart(${index})" class="cart__tour--delete">Xóa tour</button>
+            </div>
         </div>
         `;
         totalPrice.textContent = `💰Tổng tiền: ${total.toLocaleString()}đ`;
     });
+
 }
+
 
 function addTourToCart(event) {
     const button = event.target;
@@ -39,19 +60,19 @@ function addTourToCart(event) {
         id: button.dataset.id,
         name: button.dataset.name,
         price: parseInt(button.dataset.price),
+        quantity: 1
     };
 
-    const isTourExisting = cart.find(tours => tours.id === tour.id);
+    const existingTour = cart.find(t => t.id === tour.id);
 
-    if (isTourExisting) {
-        alert(`${tour.name} đã có sẵn trong giỏ hàng!`);
-    }
-    else {
+    if (existingTour) {
+        existingTour.quantity += 1;
+    } else {
         cart.push(tour);
-        updateTourCart();
-        displayTourCart();
         alert(`${tour.name} đã được thêm vào giỏ hàng!`);
     }
+    updateTourCart();
+    displayTourCart();
 }
 
 function removeTourFromCart(index) {
@@ -74,6 +95,15 @@ function checkOutTour() {
     }
     cart = [];
 
+    updateTourCart();
+    displayTourCart();
+}
+
+function changeQty(idx, dt){
+    cart[idx].quantity += dt;
+    if(cart[idx].quantity <= 0){
+        cart.splice(idx, 1);
+    }
     updateTourCart();
     displayTourCart();
 }
@@ -226,4 +256,23 @@ document.addEventListener("DOMContentLoaded", () => {
             checkOutTour();
         }
     });
+
+    
+    // update check delete all tour
+    document.getElementById("deleteButton").addEventListener("click", () => {
+    if (cart.length === 0) {
+        alert("Giỏ hàng của bạn đang trống");
+        return;
+    }
+    if (confirm("Bạn có muốn xóa toàn bộ tour")) {
+        cart = [];
+        updateTourCart();
+        displayTourCart();
+        alert("Đã xóa toàn bộ tour");
+    }
 });
+});
+
+
+
+

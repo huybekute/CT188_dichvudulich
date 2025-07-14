@@ -251,6 +251,52 @@
   transition: background-color 0.3s ease;
 }
 
+/* update quantity */
+.cart__tour--qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.buttonChange {
+  padding: 4px 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.quantityDisplay {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart__tour--action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cart__button--deleteAll {
+  display: inline-block;
+  padding: 0.625rem 0.9375rem;
+  margin-top: 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  transition: 0.2s ease;
+}
+
+.cart__button--deleteAll:hover {
+  background-color: #c82333;
+  color: white;
+}
+
 .tour__button:hover {
   background: rgba(42, 96, 63, 0.763);
 }
