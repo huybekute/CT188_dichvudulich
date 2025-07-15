@@ -202,7 +202,7 @@ function displayFavoriteTours() {
             <img src="../Image/product/vuonco.jpg" alt="Vườn cò Bằng Lăng">
             <h2>Vườn Cò Bằng Lăng</h2>
             <p class="tour__price">
-                <span>Giá: 1.150.000<sup>đ</span>
+                <span>Giá: 1.150.000<sup>đ</sup></span>
             </p>
             <ul class="tour__details">
                 <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
@@ -234,6 +234,43 @@ function displayFavoriteTours() {
                 data-price="950000">Đặt tour</button>
             <button class="tour__unfavorite--button" data-id="6">Bỏ yêu thích</button>
         </div>`;
+    }
+    if(favorites.includes(7)) {
+        favoriteTourContent += `
+        <div class="tour__item">
+            <img src="../Image/product/nhaco.jpg" alt="Nhà Cổ Bình Thủy">
+                <h2>Nhà Cổ Bình Thủy</h2>
+                <p class="tour__price">
+                    <span class="label-price">Giá: 1.050.000<sup>đ</sup></span>
+                </p>
+                <ul class="tour__details">
+                    <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                    <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                    <li><strong>🚌 Phương tiện:</strong> Xe</li>
+                </ul>
+                <button class="tour__button" data-id="7" data-name="Nhà Cổ Bình Thủy"
+                    data-price="1050000">Đặt tour</button>
+                <button class="tour__unfavorite--button" data-id="7">Bỏ yêu thích</button>
+                </div>`
+    }
+    
+    if(favorites.includes(8)){
+        favoriteTourContent+=`
+                <div class="tour__item">
+                    <img src="../Image/product/conson.jpg" alt="Cồn Sơn">
+                    <h2>Cồn Sơn</h2>
+                    <p class="tour__price">
+                        <span class="label-price">Giá: 1.550.000<sup>đ</sup></span>
+                    </p>    
+                    <ul class="tour__details">
+                        <li><strong>📍 Khởi hành:</strong> Thành phố Cần Thơ</li>
+                        <li><strong>⏱️ Thời gian:</strong> 1 ngày</li>
+                        <li><strong>🚌 Phương tiện:</strong> Thuyền</li>
+                    </ul>
+                    <button class="tour__button" data-id="8" data-name="Cồn Sơn"
+                        data-price="1550000">Đặt tour</button>
+                    <button class="tour__unfavorite--button" data-id="8">Bỏ yêu thích</button>
+                </div>`
     }
 
     tourGrid.innerHTML = favoriteTourContent;
