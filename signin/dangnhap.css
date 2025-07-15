@@ -7,6 +7,9 @@
   box-sizing: border-box;
 }
 
+body{
+  background: url(../Image/home-bg.jpg) center center/cover no-repeat;
+}
 
 .about_signin {
   width: 100%;

@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url(../Image/home-bg.jpg) no-repeat center center/cover;
+}
+
 .about_signup {
   width: 100%;
   max-width: 500px;
