@@ -69,21 +69,16 @@ function addTourToCart(event) {
         existingTour.quantity += 1;
     } else {
         cart.push(tour);
-        // alert(`${tour.name} đã được thêm vào giỏ hàng!`);
     }
     updateTourCart();
     displayTourCart();
 }
 
 function removeTourFromCart(index) {
-    const tourName = cart[index].name;
-
     cart.splice(index, 1);
 
     updateTourCart();
     displayTourCart();
-
-    // alert(`${tourName} đã được xóa khỏi giỏ hàng!`);
 }
 
 function checkOutTour() {
