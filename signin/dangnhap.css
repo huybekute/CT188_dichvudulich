@@ -11,8 +11,6 @@ body{
   background: url(../Image/home-bg.jpg) no-repeat center center/cover;
 }
 
-<<<<<<< HEAD
-=======
 .container {
   display: flex;flex-direction: column;
   min-height: 100vh;
@@ -23,7 +21,6 @@ body{
   flex: 1;
 }
 
->>>>>>> dcca1fab1410db0188617f1eb3ffaf4f97a60846
 .about_signin {
   width: 100%;
   max-width: 32rem;
