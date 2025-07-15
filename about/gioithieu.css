@@ -86,21 +86,29 @@ about__intro
 }
 
 /*Phan content*/
-.about__div2{ /*gi cua I*/
+.about__div2{ /*gi cua I va gc cua I.2*/
     grid-area: content;
 
     display: grid; /*gc cua I.2*/
-    grid-template-areas: 'about-div2-mission' 'about-div2-vision' 'about-div2-values';
+    grid-template-areas: 'about-div2-mission-vision' 'about-div2-values';
     
-    gap: 1.25rem;
-    border: 1px solid #c0cfcd;
-    border-radius: 0.313rem;
     margin: 3.75rem 3.2rem 0 3.2rem;
-    background-color: #4caf4f20;
     color: #1b5e20;
     line-height: 1.4;
     text-align: justify;
     text-justify: inter-word;
+}
+
+.about__div2--mission--vision{ /*gi cua I.2 va gc cua I.2.1*/
+    grid-area: about-div2-mission-vision;
+
+    display: grid;
+    grid-template-areas: 'about-div2-mission' 'about-div2-vision'; /*gc cua I.2.1*/
+
+    border-radius: 0.313rem;
+    border: 1px solid #c0cfcd;
+    background-color: #4caf4f20;
+    margin-bottom: 1.3rem;
 }
 
 .about__div2 h3{
@@ -114,11 +122,11 @@ about__intro
     font-size: 1.2rem;
 }
 
-.about__div2-mission{
+.about__div2-mission{ /*gi cua I.2.1*/
     grid-area: about-div2-mission;
 }
 
-.about__div2-vision{
+.about__div2-vision{ /*gi cua I.2.1*/
     grid-area: about-div2-vision;
     flex-direction: row-reverse;
 }
@@ -127,18 +135,23 @@ about__intro
     grid-area: about-div2-values;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto;
+
+    border-radius: 0.313rem;
+    border: 1px solid #c0cfcd;
+    background-color: #4caf4f20;
+    padding: 1.6rem 1.6rem 2rem 1.6rem;
 }
 
 .about__div2-mission,
 .about__div2-vision{
     display: flex; /*gi cua I.2*/
-    gap: 3.2rem;
+    gap: 2.2rem;
 }
 
 .about__mission--title{
-    margin: 3.75rem 0 1rem 6.25rem;
+    margin: 2rem 0 1rem 6.25rem;
 }
 
 .about__vision--title{
@@ -146,7 +159,7 @@ about__intro
 }
 
 .about__mission--text{
-    margin: 3.75rem 6.25rem 1rem 0;
+    margin: 2rem 6.25rem 0 0;
 }
 
 .about__vision--text{
@@ -154,9 +167,9 @@ about__intro
 }
 
 .about__values--title{ /*gi cua I.2.1*/
-    grid-column: 1 / -1;
+    grid-column: 1 / -1;    
     text-align: center;
-    margin: 2rem 1.875rem 1rem 1.875rem;
+    margin-top: 1rem;
 }
 
 .about__values-item{ /*gi cua I.2.1*/
@@ -164,10 +177,40 @@ about__intro
     margin: 0.625rem 1.25rem;
 }
 
-.about__values-item.last-item{ /*gi cua I.2.1*/
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin-bottom: 1.875rem;
+.about__values-item:hover{
+    outline: none;
+    transform: translateY(-5px) scale(1.03);
+    color: #fa8072;
+}
+
+.item-1{
+    grid-column: 1/ span 2;
+    grid-row: 2;
+    text-align: center;
+}
+
+.item-2{
+    grid-column: 3/ span 2;
+    grid-row: 2;
+    text-align: center;
+}
+
+.item-3{
+    grid-column: 5/ span 2;
+    grid-row: 2;
+    text-align: center;
+}
+
+.item-4{
+    grid-column: 1/ span 3;
+    grid-row: 3;
+    text-align: center;
+}
+
+.item-5{
+    grid-column: 4 / span 3;
+    grid-row: 3;
+    text-align: center;
 }
 
 .about__values--subtitle{
