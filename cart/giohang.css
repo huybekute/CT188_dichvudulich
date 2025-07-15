@@ -316,3 +316,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+.tour__list{
+  background-color: #e8f5e9;
+}

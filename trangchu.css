@@ -1,11 +1,12 @@
 /* Nguyen Van Hoang Huy - B2308362 */   
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
 }
 
 body {
