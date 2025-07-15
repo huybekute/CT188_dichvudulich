@@ -11,6 +11,15 @@ body{
   background: url(../Image/home-bg.jpg) no-repeat center center/cover;
 }
 
+.container {
+  display: flex;flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main__container {
+  flex: 1;
+}
 
 .about_signin {
   width: 100%;
