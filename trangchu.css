@@ -10,8 +10,6 @@
 }
 
 body {
-    display : flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -251,7 +249,6 @@ main{
     overflow: hidden;
     background: url(./Image/home-bg.jpg) no-repeat center center/cover;
     height: 100vh;
-    display: flex;
 }
 
 .home__div1{
