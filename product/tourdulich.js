@@ -1,6 +1,8 @@
 /* Hứa Yến Nhi  B2305599 */
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
+
+//luu favorite vao localStorage
 function updateFavoriteTour() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
@@ -8,6 +10,8 @@ let currentUser = localStorage.getItem("currentUser");
 
 
 const cartButton2 = document.querySelector(".tour__section--button");
+
+//check dang nhap
 function isLogIn2() {
     return localStorage.getItem("currentUser") !== null;
 }
