@@ -37,6 +37,8 @@ if (cartButton2) {
     });
 }
 
+
+//them tour vào giỏ hàng
 function addFavoriteTour(event) {
     if(!currentUser){
         alert("Vui lòng đăng nhập để thêm sản phẩm vào yêu thích");
@@ -59,6 +61,8 @@ function addFavoriteTour(event) {
         alert("Tour du lịch đã được thêm vào danh sách yêu thích!");
     }
 }
+
+//xóa tour
 
 function removeFavoriteTour(event) {
     const button = event.target;

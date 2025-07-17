@@ -115,6 +115,8 @@ passwordInput.addEventListener("input", () => {
   passwordInput.setCustomValidity(""); 
 });
 
+
+//hien thi mat khau
 if (togglePassword && passwordInput) {
     togglePassword.addEventListener("click", function () {
         const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
