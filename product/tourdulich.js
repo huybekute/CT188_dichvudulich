@@ -1,4 +1,3 @@
-// B2303831 Dang Hoang Nghia
 /* Hứa Yến Nhi  B2305599 */
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
