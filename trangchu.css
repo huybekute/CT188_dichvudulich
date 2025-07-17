@@ -249,6 +249,7 @@ main{
     overflow: hidden;
     background: url(./Image/home-bg.jpg) no-repeat center center/cover;
     height: 100vh;
+    display: flex;
 }
 
 .home__div1{
